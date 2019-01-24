@@ -14,6 +14,6 @@ namespace RestSharpPracticeWithFinanceAPI
         //    this.api = apiKey;
         //}
 
-        public static string apiKey = "1PO9VNXTLC4Z3GJR";
+        public static string apiKey = "";
     }
 }
