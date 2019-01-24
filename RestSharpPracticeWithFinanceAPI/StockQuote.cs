@@ -24,7 +24,9 @@ namespace RestSharpPracticeWithFinanceAPI
         [JsonProperty("Global Quote")]
         public Dictionary<string, string> Output { get; set; }
 
-        public void parseOutput()
+        
+
+    public void parseOutput()
         {
             symbol = Output["01. symbol"];
             open = float.Parse(Output["02. open"]);

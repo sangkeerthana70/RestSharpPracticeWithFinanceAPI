@@ -32,11 +32,14 @@ namespace RestSharpPracticeWithFinanceAPI
             //Deserialize will convert the raw string into Json format
             // Take the Json and convert it into a Csharp Object after instantiation
             StockQuote stockQuote = JsonConvert.DeserializeObject<StockQuote>(finalContent);
-
+            foreach (KeyValuePair<string, string> item in stockQuote.Output)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+            }
             stockQuote.parseOutput();
 
-            Console.WriteLine(stockQuote.symbol);
-            Console.WriteLine(stockQuote.open);
+            Console.WriteLine("symbol: " + stockQuote.symbol);
+            Console.WriteLine("parsed open: " + stockQuote.open);
             Console.WriteLine(stockQuote.high);
             Console.WriteLine(stockQuote.low);
             Console.WriteLine(stockQuote.price);
