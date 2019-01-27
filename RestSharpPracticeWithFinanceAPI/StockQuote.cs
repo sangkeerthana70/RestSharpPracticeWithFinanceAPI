@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace RestSharpPracticeWithFinanceAPI
 {
-    class StockQuote
+    public class StockQuote
     {
         public string symbol { get; set; }
         public float open { get; set; }
@@ -20,6 +20,8 @@ namespace RestSharpPracticeWithFinanceAPI
         public float previousClose { get; set; }
         public float change { get; set; }
         public float changePercent { get; set; }
+        public string dataSource { get; set; }
+        public DateTime createDate { get; set; }
 
         [JsonProperty("Global Quote")]
         public Dictionary<string, string> Output { get; set; }
