@@ -26,9 +26,9 @@ namespace RestSharpPracticeWithFinanceAPI
         [JsonProperty("Global Quote")]
         public Dictionary<string, string> Output { get; set; }
 
-        
 
-    public void parseOutput()
+
+        public void parseOutput()
         {
             symbol = Output["01. symbol"];
             open = float.Parse(Output["02. open"]);
@@ -39,10 +39,11 @@ namespace RestSharpPracticeWithFinanceAPI
             latestTradingDay = DateTime.Parse(Output["07. latest trading day"]);
             previousClose = float.Parse(Output["08. previous close"]);
             change = float.Parse(Output["09. change"]);
-            
+
             changePercent = float.Parse(Output["10. change percent"].Trim('%'));
 
-        }
 
+
+        }
     }
 }
